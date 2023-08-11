@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  redis-compose:
+    container_name: "redis_whats"
+    image: redis
+    command: redis-server --appendonly yes
+    hostname: redis
+    ports:
+      - "6378:6379"
+    volumes:
+      - /home/duducp/Redis:/var/lib/postgresql/data
